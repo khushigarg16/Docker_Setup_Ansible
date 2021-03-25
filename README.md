@@ -1,9 +1,8 @@
 # Docker_Setup_Ansible 
 
-# Task Description📄 
+### Task Description📄 
 
-
-# **🔰Write an Ansible Playbook that does the following operations in the managed nodes:** 
+### Ansible Playbook that does the following operations in the managed nodes: 
 
  🔹 Configure Docker 
 
