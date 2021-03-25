@@ -1,0 +1,41 @@
+ hosts: all
+  tasks:
+  - yum_repository:
+      description: "Docker Yum repo"
+      name: "Docker_repo"
+      baseurl: "https://download.docker.com/linux/centos/7/x86_64/stable/"
+      gpgcheck: no
+    
+  - package:
+      name: "docker-ce-18.06.3.ce-3.el7.x86_64"
+      state: present
+
+  - service:
+      name: "docker"
+      state: started
+      enabled: yes
+
+  - command: pip3 install docker
+
+  - file:
+      state: directory
+      path: "/webserver"
+
+  - copy:
+      src: "mywebpage.html"
+      dest: "/webserver"
+
+  - docker_image:
+      name: "httpd:latest"
+      source: pull
+
+  - docker_container:
+      name: "MyWebserver"
+      image: "httpd:latest"
+      state: started
+      exposed_ports:
+      - "80"
+      ports:
+      - "8080:80"
+      volumes:
+      - "/webserver:/usr/local/apache2/htdocs"
