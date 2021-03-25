@@ -1,16 +1,16 @@
-# Docker_Setup_Ansible \
+# Docker_Setup_Ansible 
 
-# Task Description📄 \
+# Task Description📄 
 
 
-# **🔰Write an Ansible Playbook that does the following operations in the managed nodes:** \
+# **🔰Write an Ansible Playbook that does the following operations in the managed nodes:** 
 
- 🔹 Configure Docker \
+ 🔹 Configure Docker 
 
- 🔹 Start and enable Docker services \
+ 🔹 Start and enable Docker services 
 
- 🔹 Pull the httpd server image from the Docker Hub \
+ 🔹 Pull the httpd server image from the Docker Hub 
 
- 🔹 Run the docker container and expose it to the public \
+ 🔹 Run the docker container and expose it to the public 
 
- 🔹 Copy the html code in /var/www/html directory and start the webserver \
+ 🔹 Copy the html code in /var/www/html directory and start the webserver 
